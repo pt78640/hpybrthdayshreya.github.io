@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color:grey;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 180px;
+  padding:0;
+  margin: 0;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: absolute;
+  display: none;
+  padding: 10px;
+  background-color: #009;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color:black;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>'Beauty'i had never seen before.</h2>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+<div class="column">
+                    <img src="pic2.jpg" alt="<b>i wish we were friends since  childhood.</b>" style="width:40%" onclick="myFunction(this);">
+                  </div>
+  
+  <div class="column">
+    <img src="pic3.jpg" alt="<b>When i first met you,i honestly didn't know that you were gonna be this important to me.</b>" style="width:40%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="pic4.jpg" alt="<b>shreya which implies what you are exactly:Sweety,Honest,Rowdy baby,Entertainer,Youthful,Adorable...</b>" style="width:40%" onclick="myFunction(this);">
+  </div>
+
+  <div class="column">
+        <img src="pic12.jpg" alt="<b>Next time main bhi tere saath manali ghumne jana chahti hu yrr</b>" style="width:40%" onclick="myFunction(this);">
+      </div>
+          <div class="column">
+                <img src="pic9.jpg" alt="<b>meri jhalli shreya... teri meri dosti jitni pyari hain,utni hi pyari tu hain.sare friends me ek tu hi hain jise mujhe pareshan krne me sabse jada maza aata hain.</b> " style="width:40%" onclick="myFunction(this);">
+              </div><div class="column">
+                    <img src="pic10.jpg" alt="<b>Oh my cutypie,Because of you,i laugh a little harder,cry a little lesser,and smile a lot more so i wanna always be with you till the end of my life.</b> " style="width:40%" onclick="myFunction(this);">
+                  </div></div>
+                
+<div class="column">
+                    <img src="pic15.jpg" alt="<b>I love you my angel tujhe kabhi na main bhulaungi..</b>" style="width:40%" onclick="myFunction(this);">
+                  </div></div></div><div class="column">
+                      <img src="pic5.jpg" alt="<b>beauty that can't describe in words.</b> " style="width:40%" onclick="myFunction(this);">
+                    </div></div>
+
+<div class="column">
+                    <img src="pic16.jpg" alt="<b>you look like a shraddha kapoor in this pose dear.</b>" style="width:40%" onclick="myFunction(this);">
+                  </div></div></div>
+<div class="column">
+                    <img src="pic6.jpg" alt="<b>hamare saath mein hone se khushiya saath me hoti hain or saath na hone se bas yaadein hi saath hoti hain.</b>" style="width:40%" onclick="myFunction(this);">
+                  </div></div></div>
+<div class="column">
+                    <img src="pic7.jpg" alt="<b>We have so many similarities and differences too, but we both always there to take care of each other when we needed.This is all understanding of friends which i knew after meeting you.Thank you .</b>" style="width:40%" onclick="myFunction(this);">
+                  </div></div></div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="height:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>
